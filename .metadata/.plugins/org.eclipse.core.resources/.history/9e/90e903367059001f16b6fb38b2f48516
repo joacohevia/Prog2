@@ -1,0 +1,47 @@
+package avion;
+
+public class Avion1 {			
+	private int cantidad;
+	private String color;
+	private String marca;
+	
+	public Avion1() {//constructor
+		cantidad = 50;
+		color = "Celeste";
+		marca = "Boing777";
+	}
+	public Avion1(int cantidadDada) {
+		cantidad = cantidadDada;
+		color = "Celeste";
+		marca = "Boing777";
+	}
+	public Avion1(int cantidadDada, String colorDado) {
+		cantidad = cantidadDada;
+		color = colorDado;
+		marca = "Boing777";
+	}
+	public Avion1(int cantidadDada, String colorDado, String marcaDada) {
+		cantidad = cantidadDada;
+		color = colorDado;
+		marca = marcaDada;
+	}
+	
+	public int getCantidad() {
+		return cantidad;
+	}
+	public String getMarca() {
+		return marca;
+	}
+	public String getColor() {
+		return color;
+	}
+	public void setColor(String colorDado) {
+		if(!colorDado.equals("rojo"))
+		color = colorDado;
+		//si no es igual, siempre a los objetos le envio mensaje con el punto
+	}
+	public void setMarca(String marcaDada) {
+		marca = marcaDada;
+	}
+	
+}

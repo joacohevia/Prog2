@@ -1,0 +1,66 @@
+package avion;
+
+public class Avion1 {			
+	private int cantidad;
+	private String color;
+	private String marca;
+	private int id;
+	private float balance;
+	private int cantidadAsientos;
+	
+	public Avion1() {//constructor
+		id = 10;
+		this.setCantidad(cantidad);
+		this.setColor(color);
+		this.setMarca(marca);
+	}
+	public Avion1(int cantidadDada) {
+		cantidad = cantidadDada;
+		color = "Celeste";
+		marca = "Boing777";
+	}
+	public Avion1(int cantidadDada, String colorDado, String marcaDada) {
+		cantidad = cantidadDada;
+		color = colorDado;
+		marca = marcaDada;
+	}
+	//llamo directamente a los set
+	public Avion1(String marcaDada,int cantidadDada,String colorDado) {
+		this.setCantidad(cantidad);
+		this.setColor(color);
+		this.setMarca(marca);
+	}
+	
+	public int id() {
+		return id;
+	}
+	public int getCantidad() {
+		return cantidad;
+	}
+	public String getMarca() {
+		return marca;
+	}
+	public String getColor() {
+		return color;
+	}
+	public double getBalance() {
+		return balance;
+	}
+	
+	public void setColor(String colorDado) {
+		if(!colorDado.equals("rojo")) {
+			this.color = colorDado;
+			//si no es igual, siempre a los objetos le envio mensaje con el punto
+		}else {
+			this.color = "rojo_cambio";
+		}
+	}
+	public void setMarca(String marca) {
+		this.marca = marca;
+	}
+	public void setCantidad(int cantidad) {
+		this.cantidad = cantidad;
+		this.balance = cantidad / cantidadAsientos;
+	}
+	
+}

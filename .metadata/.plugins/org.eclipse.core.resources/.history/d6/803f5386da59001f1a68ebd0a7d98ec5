@@ -1,0 +1,68 @@
+package avion;
+
+public class Avion1 {			
+	private String color;
+	private String marca;
+	private int capacidad;	
+	private int cantidadAsientos;
+	private double balance;
+
+	public Avion1() {//constructor
+		color = "Negro";
+		marca = "Boing777";
+		capacidad = 100;
+		cantidadAsientos = 100;
+	}
+	public Avion1(String color) {
+		this();
+		this.setColor(color);
+	}
+	
+	public int getCantidadAsientos() {
+		return cantidadAsientos;
+	}
+	
+	public void setCantidadAsientos(int cantidadAsientos) {
+		this.cantidadAsientos = cantidadAsientos;
+		balance = (double)capacidad / (double)cantidadAsientos;
+	}
+	
+	public int getCapacidad() {
+		return capacidad;
+	}
+	
+	public String getMarca() {
+		return marca;
+	}
+	
+	public String getColor() {
+		return color;
+	}
+	
+	public double getBalance() {
+		return balance;
+	}
+	
+	public void setColor(String colorDado) {
+		if(!colorDado.equals("rojo")) {
+			this.color = colorDado;
+		}else {
+			this.color = "rojo_cambio";
+		}
+	}
+	
+	public void setMarca(String marca) {
+		this.marca = marca;
+	}
+	
+	public void setCapacidad(int capacidad) {
+		this.capacidad = capacidad;
+		if (this.cantidadAsientos > 0) {
+			this.balance = (double)capacidad / this.cantidadAsientos;
+		} else {
+			this.balance = 0;
+		}
+	}
+}
+
+

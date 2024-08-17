@@ -1,0 +1,10 @@
+package avion;
+
+public class Juego1 {
+	private int puntosJug1;
+	private int puntosJug2;
+	
+	public Juego1() {
+		
+	}
+}
