@@ -13,8 +13,8 @@ public class JuegoDadosPOO {
 	public JuegoDadosPOO(Jugador jj1, Jugador jj2) {
 		j1 = jj1;
 		j2 = jj2;
-		d1 = new Dado();
-		d2 = new Dado();
+		d1 = new Dado(6);
+		d2 = new Dado(6);
 		rondas = 10;
 		minimoPuntos = 7;
 	}

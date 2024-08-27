@@ -24,6 +24,14 @@ public class JuegoDadosPooCubilete {
 		rondas = 10;
 		minimoPuntos = 7;
 	}
+	public JuegoDadosPooCubilete(Jugador jj1, Jugador jj2, Cubilete cc,
+			int rond, int minimoPunt) {
+		j1 = jj1;
+		j2 = jj2;
+		vasito = cc;
+		rondas = rond;
+		minimoPuntos = minimoPunt;
+	}
 	
 	public void setRondas(int rr) {
 		rondas = rr;
@@ -77,9 +85,9 @@ public class JuegoDadosPooCubilete {
 		Jugador ana = new Jugador("Ana");
 		Jugador jose = new Jugador("Jose");
 		Cubilete vasoNuevo = new Cubilete(5,30);
-		JuegoDadosPooCubilete juego = new JuegoDadosPooCubilete(ana,jose,vasoNuevo);
-		juego.setRondas(350);
-		juego.setMinimoPuntos(35);
+		JuegoDadosPooCubilete juego = new JuegoDadosPooCubilete(ana,jose,vasoNuevo,40,7);
+		//juego.setRondas(350);
+		//juego.setMinimoPuntos(35);
 		Jugador ganador = juego.jugar();
 		if(ganador!= null) {
 			System.out.println("Gano el Jugador "+ ganador.getNombre() + " con "+ ganador.getPuntos());

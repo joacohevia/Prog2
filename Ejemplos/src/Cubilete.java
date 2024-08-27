@@ -29,7 +29,7 @@ public class Cubilete {
   public int tirar() {
 	  int suma = 0;
 	  for (int i =0; i< dados.length;i++) {
-		  suma = suma + dados[i].tirar();
+		   suma += dados[i].tirar();
 	  }
 	  return suma;
   }
