@@ -7,6 +7,8 @@ public class main_agenda {
 	
 	public static void main (String[] args) {
 		LocalDateTime fechaHora = LocalDateTime.of(2010, 8, 18, 10, 15, 30);
+		LocalDateTime fechaHora2 = LocalDateTime.of(2015, 9, 20, 12, 12, 20);
+
 		Agenda_2 agenda1 = new Agenda_2("Joaco_usuario");
 		
 		Reunion_2 reunion1 = new Reunion_2("Havanna","Consorsio","1:30h",fechaHora);
@@ -40,6 +42,9 @@ public class main_agenda {
 	            System.out.println("- " + persona.getNombre() + ", Contacto: " + persona.getTelefono()+", Correo: "+persona.getEmail()
 	            +","+aux);
 	        }
+	        
+	        System.out.println("Nombre de usuario: "+agend+" Reuniones: "+reunion2.getLugar()+"/"+reunion2.getTema()
+			+"/"+reunion2.getDuracion()+"/"+reunion2.getFecha_hora());
 	        	
 		
 	}

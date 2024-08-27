@@ -12,7 +12,26 @@ public class Agenda_2 {
 		this.nombre_usuario = nombre_usuario;
 		this.reunion = new ArrayList<>();
 	}
-	public void agregarReunion(Reunion_2 reun) {
+	
+	
+	   public void agregarReunion(Reunion_2 nuevaReunion) {
+		   LocalDateTime inicioNueva = nuevaReunion.getFecha_hora();
+		   boolean conflicto=false;
+	        for (Reunion_2 reunio : reunion) {
+	        	if(!conflicto) {
+	        		LocalDateTime inicioExistente = reunio.getFecha_hora();
+	        		if(inicioNueva.equals(inicioExistente)) {
+	        			System.out.println("Ya existe una reunion con ese dia y horario");
+	        			conflicto=true;
+	        		}
+	        	}
+	        }
+	        if (!conflicto) {
+	            this.reunion.add(nuevaReunion);
+	        }
+	        
+	    }	
+	/*public void agregarReunion(Reunion_2 reun) {
 		for (Reunion_2 reunio : reunion) {
             LocalDateTime finReunion = reunio.getFecha_hora();
             LocalDateTime nuevaReunion = reun.getFecha_hora();
@@ -23,7 +42,7 @@ public class Agenda_2 {
             	 System.out.println("agregada");
             }
 		}
-	}
+	}*/
 	public Reunion_2 obtenerReunion(int numReunion) {
 		return reunion.get(numReunion);
 	}

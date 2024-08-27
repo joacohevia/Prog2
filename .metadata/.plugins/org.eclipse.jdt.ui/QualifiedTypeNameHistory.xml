@@ -4,4 +4,5 @@
     <fullyQualifiedTypeName name="tp1_ej2_elec.PuntoGeometrico"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="series.Episodio"/>
+    <fullyQualifiedTypeName name="java.time.LocalDateTime"/>
 </qualifiedTypeNameHistroy>

@@ -13,7 +13,7 @@ public class Reunion_2 {
 		this.lugar = lugar;
 		this.tema = tema;
 		this.duracion = duracion;
-		this.fecha_hora = fecha_hora;
+		this.setFecha_hora(fecha_hora);
 		this.personas = new ArrayList<>();
 	}
 	public void agregarPersona(Persona_2 person) {
