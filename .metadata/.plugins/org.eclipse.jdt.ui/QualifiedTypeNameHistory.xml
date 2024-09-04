@@ -5,4 +5,7 @@
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="series.Episodio"/>
     <fullyQualifiedTypeName name="java.time.LocalDateTime"/>
+    <fullyQualifiedTypeName name="sun.security.ec.ECOperations.PointMultiplier.Default"/>
+    <fullyQualifiedTypeName name="elementos.Persona"/>
+    <fullyQualifiedTypeName name="sistEncuesta.Encuesta"/>
 </qualifiedTypeNameHistroy>

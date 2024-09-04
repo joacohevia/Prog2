@@ -6,7 +6,6 @@ public class Turno {
 	private String tipoCancha;
 	private String idCancha;
 	private Usuario usuarios;
-	private String nombre;
 	private LocalDateTime fechaHora;
 	
 	public Turno(String tipoCancha,String idCancha, Usuario usuario, LocalDateTime fechaHor) {
@@ -20,7 +19,7 @@ public class Turno {
 	public double calcularPrecio() {
 		double precio = tipoCancha.equals("Futbol")? 400 : 100;
 					//compara si es futbol da true->400: si es false->100
-		if(usuarios.verficarSocio()) {
+		if(usuarios.EsSocio()) {
 			precio *= 0.9;
 		}
 		return precio;
@@ -43,13 +42,6 @@ public class Turno {
 		this.usuarios = usuarios;
 	}
 
-	public String getNombre() {
-		return nombre;
-	}
-
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
-	}
 
 
 	public String getTipoCancha() {

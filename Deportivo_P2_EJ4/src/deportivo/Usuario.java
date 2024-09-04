@@ -1,8 +1,8 @@
 package deportivo;
-
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
+
 
 public class Usuario {
 	private String nombre;
@@ -15,31 +15,41 @@ public class Usuario {
 		this.turnos = new ArrayList<>();
 	}
 	public void agregarTurno(Turno turn) {
-		turnos.add(turn);
+        this.turnos.add(turn);
 		//para agregar como es de la clase turno tengo q pasar tipo de cancha,
 		//idcancha , y Usuario q seria nombre.
 	}
 	
 	public boolean verficarSocio() {
-		return contadorReservas();
+		if(this.contadorReservas()) {
+			this.setEsSocio(true);
+			return true;
+		}
+		return false;
 	}
-	
 	
 	public boolean contadorReservas() {
 		int contador=0;
 		 // Inicializar 'hasta' como la fecha y hora actuales
         LocalDateTime hasta = LocalDateTime.now();
-        // Inicializar 'desde' como hace dos meses a partir de 'hasta'
+        // Inicializar 'desde' como dos meses antes de 'hasta'
         LocalDateTime desde = hasta.minusMonths(2);
 		for(Turno turn : turnos) {
-			if(turn.getNombre().equals(nombre) && turn.getFechaHora().isAfter(desde)
-					&& turn.getFechaHora().isBefore(hasta)) {
-				
+			if(turn.getUsuario() != null && turn.getUsuario().getNombre().equals(this.nombre)
+			//el usuario asociado a este turno dame su nombre y comparalo con el nombre actual
+			//que seria el usuario q lo esta ejecutando
+				&& turn.getFechaHora().isAfter(desde)
+				&& turn.getFechaHora().isBefore(hasta)) {
+		
 				contador++;
 			}	
 		}
 		//recorrer turnos y buscar por nombre
 		return contador >=4;
+	}
+	public int obtenerTurnos() {
+	    int numeroDeTurnos = turnos.size();
+	    return numeroDeTurnos;  // Retorna la cantidad de turnos
 	}
 	
 
@@ -66,5 +76,6 @@ public class Usuario {
 	public void setTurnos(List<Turno> turnos) {
 		this.turnos = turnos;
 	}
+	
 	
 }

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
     <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
-        <listEntry value="/tp1_ej2_elec/src/tp1_ej2_elec/ejecutable.java"/>
+        <listEntry value="/Tp2_Peluqueria/src/ejecutable.java"/>
     </listAttribute>
     <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
         <listEntry value="1"/>
     </listAttribute>
     <booleanAttribute key="org.eclipse.jdt.launching.ATTR_EXCLUDE_TEST_CODE" value="true"/>
-    <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="tp1_ej2_elec.ejecutable"/>
-    <stringAttribute key="org.eclipse.jdt.launching.MODULE_NAME" value="tp1_ej2_elec"/>
-    <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="tp1_ej2_elec"/>
+    <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="ejecutable"/>
+    <stringAttribute key="org.eclipse.jdt.launching.MODULE_NAME" value=""/>
+    <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="Tp2_Peluqueria"/>
 </launchConfiguration>
