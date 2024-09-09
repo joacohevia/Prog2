@@ -1,3 +1,6 @@
+package Tp3.Encuesta;
+
+
 public class Encuestado extends Persona {
 
     private int dni;

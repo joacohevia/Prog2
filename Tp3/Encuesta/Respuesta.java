@@ -1,3 +1,5 @@
+package Tp3.Encuesta;
+
 public class Respuesta {
 
     private String respuesta;
