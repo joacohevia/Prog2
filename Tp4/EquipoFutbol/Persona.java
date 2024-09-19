@@ -14,6 +14,7 @@ public class Persona {
         this.apellido = apellido;
         this.numPasarporte = numPasarporte;
         this.fechaNac = fechaNac;
+        
     }
     
 

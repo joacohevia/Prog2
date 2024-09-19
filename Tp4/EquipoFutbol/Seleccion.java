@@ -34,7 +34,6 @@ public class Seleccion {
         
     }
   
-
     public void agregarFutbolist(Futbolista... f) {
         for (Futbolista futbol : f) {
             futbolistas.add(futbol);
