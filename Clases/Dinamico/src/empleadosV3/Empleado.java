@@ -36,39 +36,18 @@ public  class Empleado {
 		return calculador.calcularSueldo(this);
 	}
 	
-
-
-
-
 	public double getVentas() {
 		return ventas;
 	}
-
-
-
 	public void setVentas(double ventas) {
 		this.ventas = ventas;
 	}
-
-
-
-
-
-
 	public double getHoras() {
 		return horas;
 	}
-
-
-
 	public void setHoras(double horas) {
 		this.horas = horas;
 	}
-
-
-
-
-
 	public String getNombre() {
 		return nombre;
 	}
@@ -84,9 +63,6 @@ public  class Empleado {
 	public void setDni(int dni) {
 		this.dni = dni;
 	}
-
-
-	
 	public boolean equals(Object o1) {
 		if (o1 instanceof Empleado) {
 			Empleado ee = (Empleado)o1;

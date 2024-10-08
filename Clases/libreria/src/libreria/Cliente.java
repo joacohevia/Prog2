@@ -111,9 +111,6 @@ public  class Cliente {
 	public boolean yaCompro(Producto ss) {
 		return compras.contains(ss);
 	}
-
-
-
 	public  boolean leGusta(Producto pp) {
 		String autor = pp.getAutor();
 		if (!this.leGustaAutor(autor)) {

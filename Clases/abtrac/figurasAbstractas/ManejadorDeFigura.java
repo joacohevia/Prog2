@@ -37,5 +37,8 @@ public class ManejadorDeFigura {
 		
 		Figura2DFija ffija = new Figura2DFija("Fija1", 10, 25);
 		manejador.mostrarInformacion(ffija);
+
+		Figura2D sm = new MedioCirculo(3, "mc1");
+		manejador.mostrarInformacion(sm);
 	}
 }

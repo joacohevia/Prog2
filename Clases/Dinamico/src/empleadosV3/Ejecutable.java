@@ -22,8 +22,7 @@ public class Ejecutable {
 		System.out.println(ee.totalSueldos());
 		
 		e3.setCalculador(new CalculadorSueldoFijo(20000));
-		
-
+		//DINAMICO
 		System.out.println(ee.totalSueldos());
 		//System.out.println(((Empleado)e2).getSueldo());
 		
