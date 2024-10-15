@@ -13,7 +13,7 @@ public class Tablero {
         this.puntaje = puntaje;
         this.fichas = new ArrayList<>();
     }
-    public void setDificultad() {
+    public void CalcularDificultad() {
         double suma = 0;
         double totalFortaleza = calcFort();
         double totalDestruccion = calcDestruc();

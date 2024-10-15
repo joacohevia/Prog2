@@ -16,6 +16,7 @@ public class Main {
 
     Documento capelucita = new Documento("capelucita", "el ultimo almuerzo");
     capelucita.addAutores("joaquin");
+    capelucita.addAutores("sant");
     capelucita.addPalabras("cap");
 
     raul.addDocumentos(biblia);
@@ -24,13 +25,16 @@ public class Main {
 
 
     CondNombre cond1 = new CondNombre("capelucITA");
+    CondPalFrase condFrase = new CondPalFrase("cape");
     CondPalClave palabraClave = new CondPalClave("dios");
     CondNoClave noTieneClave = new CondNoClave();
     CondAutor nombreAutor = new CondAutor("sant");
+    CondNot condnot = new CondNot(cond1);
     CondContenido contenidoMayor = new CondContenido(5);
+    CondAnd cAnd = new CondAnd(condnot,nombreAutor);
 
     
-    ArrayList <Documento> resultados = raul.buscar(contenidoMayor);
+    ArrayList <Documento> resultados = raul.buscar(cAnd);
     /*tengo que implementar metodo buscar como en la farmacia... */
 	System.out.println(resultados);
     }

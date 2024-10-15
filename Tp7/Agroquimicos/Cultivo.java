@@ -1,16 +1,20 @@
 
 import java.util.ArrayList;
 
-public class Cultivo extends Condicion{
+public class Cultivo{
     private String nombre;
-    private ArrayList <String> enfermedad;
+    private ArrayList <Enfermedad> enfermedad;
 
     public Cultivo(String nombre){
         this.nombre = nombre;
         this.enfermedad = new ArrayList<>();
     }
-    public void addEnfermedad(String enfer){
-        if (!enfermedad.contains(enfer.toLowerCase())) {
+    @Override
+    public String toString() {
+        return "Cultivo [nombre=" + nombre + ", enfermedad=" + enfermedad + "]";
+    }
+    public void addEnfermedad(Enfermedad enfer){
+        if (!enfermedad.contains(enfer)) {
             enfermedad.add(enfer);
         }
     }
@@ -21,20 +25,8 @@ public class Cultivo extends Condicion{
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-    @Override
-    public ArrayList<ProducQuimico> cumple(Empresa empre,Enfermedad enfer) {
-        ArrayList <ProducQuimico> productosQueCumplen = new ArrayList<>();
-        for (ProducQuimico pq : empre.getProductos()) {
-            if (pq.esApto(this, enfer)) {
-                productosQueCumplen.add(pq);
-            }
-        }
-        if (productosQueCumplen.isEmpty()) {
-            System.out.println("No hay productos que cumplan");
-        }
-        return productosQueCumplen;
-    }
-    public ArrayList<String> getEnfermedad() {
+    
+    public ArrayList<Enfermedad> getEnfermedad() {
         return enfermedad;
     }
 }

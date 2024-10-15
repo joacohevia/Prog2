@@ -6,31 +6,25 @@ import sitioWeb1.CondicionesWeb.Condicion;
 
 public class Categoria extends ElementoCat{
     private ArrayList <ElementoCat> elementos;
-    private ArrayList <Noticia> noticias;
+    private String descripcion;
+    private String imagen;
 
     public Categoria(String descripcion, String imagen) {
-        super(descripcion, imagen);
+        this.descripcion = descripcion;
+        this.imagen = imagen;
         this.elementos = new ArrayList<>();
-        this.noticias = new ArrayList<>();
-        
     }
     public void addElemento(ElementoCat ee){
         this.elementos.add(ee);
     }
-    public void addNoticia(Noticia ee){
-        this.noticias.add(ee);
-    }
-    
-    @Override
+    @Override //clase categoria
     public ArrayList<Noticia> buscar(Condicion cc) {
-         ArrayList<Noticia> retorno = new ArrayList<>();
-         for (Noticia noticia : noticias) {
-            if (cc.cumple(noticia)) {
-                retorno.add(noticia);
+        ArrayList<Noticia> retorno = new ArrayList<>();
+         for (ElementoCat elem : elementos) {
+            ArrayList <Noticia> parcial = elem.buscar(cc);
+            for (Noticia notiCumple : parcial) {
+                retorno.add(notiCumple);
             }
-        } // Buscar en las sub-secciones
-        for (ElementoCat subSeccion : elementos) {
-            retorno.addAll(subSeccion.buscar(cc)); // Busca en cada sub-sección
         }
         return retorno;
     }
@@ -38,9 +32,20 @@ public class Categoria extends ElementoCat{
     public int cantidadNoticias() {
         int total=0;
         for (ElementoCat elementoCat : elementos) {
-            total =+ elementoCat.cantidadNoticias();
+            total += elementoCat.cantidadNoticias();
         }
-        return total;
+        return total+1;
     }
-  
+    public String getDescripcion() {
+        return descripcion;
+    }
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
+    public String getImagen() {
+        return imagen;
+    }
+    public void setImagen(String imagen) {
+        this.imagen = imagen;
+    }
 }

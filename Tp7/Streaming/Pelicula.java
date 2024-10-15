@@ -29,8 +29,11 @@ public class Pelicula {
             actores.add(act.toLowerCase());
         }
     }
+    public ArrayList<String> getActores() {
+        return actores;
+    }
     public boolean buscarActor(String act){
-        return actores.contains(act.toLowerCase());
+        return this.actores.contains(act.toLowerCase());
     }
 
     public String getTitulo() {

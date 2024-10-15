@@ -17,7 +17,8 @@ public class Main {
         candy.addFicha(f2);
         candy.addFicha(fichaEspe);
 
-        candy.setDificultad();  
+        candy.CalcularDificultad();
+          
         System.out.println(candy);
         CondDestrucMayor cond1 = new CondDestrucMayor();
         ArrayList <Ficha> resultado =candy.buscar(cond1);

@@ -8,12 +8,19 @@ public class Enfermedad{
         this.nombre = nombre;
         this.sintomas = new ArrayList<>();
     }
+    @Override
+    public String toString() {
+        return "Enfermedad [nombre=" + nombre + "]";
+    }
     public void addSintomas(String sin){
         if (!sintomas.contains(sin.toLowerCase())) {
             sintomas.add(sin);
         }
     }
 
+    public boolean contieneEstado(String estadoPatologico){
+        return this.sintomas.contains(estadoPatologico);
+    }
     public String getNombre() {
         return nombre;
     }

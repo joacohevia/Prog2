@@ -1,59 +1,40 @@
 package sitioWeb1;
 
+import java.util.ArrayList;
+
+import sitioWeb1.CondicionesWeb.CondAutor;
+import sitioWeb1.CondicionesWeb.CondMinimo;
+import sitioWeb1.CondicionesWeb.CondPalClave;
+import sitioWeb1.CondicionesWeb.CondTitulo;
+
 public class Main {
     public static void main(String[] args) {
-        Noticia n1 = new Noticia("Futbol", "aaa", "aaa", "kiliam", "www");
-        n1.addPalabra("partido");
-        Noticia n2 = new Noticia("Futbol", "aaa", "aaa", "kiliam", "www");
-        Noticia n3 = new Noticia("necro", "aaa", "aaa", "kiliam", "www");
+        Noticia n1 = new Noticia("Futbol", "aaa", "aaaaaaa", "Juan Perez", "www");
+        Noticia n2 = new Noticia("Goleada", "aaa", "aaaaaaaaa", "kiliam", "www");
+        n2.addPalabra("partido");
+        n2.addPalabra("goleada");
+        Noticia n3 = new Noticia("necrologicas", "aaa", "aaa", "kiliam", "www");
+        Noticia n4 = new Noticia("ultimo momento", "sds", "sdssd", "sdas", "ds");
 
+        Categoria seccionFutbol = new Categoria("Seccion fut", "seccion");
         Categoria deporte = new Categoria("depor", "png");
         deporte.addElemento(n1);
         deporte.addElemento(n2);
+        deporte.addElemento(n4);
+        seccionFutbol.addElemento(deporte);
 
-        Categoria necrologicas = new Categoria("necro", "png");
-        necrologicas.addNoticia(n3);
+        Categoria necrologica = new Categoria("necrologica", "necro.png");
+        necrologica.addElemento(n3);
 
+        System.out.println(seccionFutbol.cantidadNoticias());
+        
+        CondAutor condAut = new CondAutor();
+        CondPalClave condPal = new CondPalClave();
+        CondTitulo condTit = new CondTitulo();
+        CondMinimo condMin = new CondMinimo();
 
-        /*
-         * public class Main {
-    public static void main(String[] args) {
-        // Crear categoría y secciones
-        Categoria deportes = new Categoria("Deportes", "imagen_deportes.jpg");
-        Seccion futbol = new Seccion("Fútbol", "imagen_futbol.jpg");
-        Seccion basquet = new Seccion("Básquet", "imagen_basquet.jpg");
+        ArrayList <Noticia> resultado = seccionFutbol.buscar(condMin);
+        System.out.println(resultado);
 
-        // Crear noticias
-        Noticia noticia1 = new Noticia("Victoria del equipo local", "El equipo local ganó 3-1.", "Juan Pérez", "link1");
-        Noticia noticia2 = new Noticia("Partido emocionante", "Un partido emocionante que terminó 2-2.", "Pedro López", "link2");
-        Noticia noticia3 = new Noticia("Último momento", "Actualización sobre el torneo.", "Juan Pérez", "link3");
-
-        // Agregar noticias a las secciones
-        futbol.agregarNoticia(noticia1);
-        futbol.agregarNoticia(noticia2);
-        basquet.agregarNoticia(noticia3);
-
-        // Agregar secciones a la categoría
-        deportes.agregarElemento(futbol);
-        deportes.agregarElemento(basquet);
-
-        // Condiciones para búsqueda
-        Condicion condicionTextoMayor200 = new CondTextoMayor(200);
-        Condicion condicionAutorJuan = new CondAutor("Juan Pérez");
-        Condicion condicionTituloUltimoMomento = new CondTituloExacto("Último momento");
-
-        // Buscar noticias según las condiciones
-        List<Noticia> noticiasTextoMayor200 = deportes.buscar(condicionTextoMayor200);
-        List<Noticia> noticiasAutorJuan = deportes.buscar(condicionAutorJuan);
-        List<Noticia> noticiasTituloUltimoMomento = deportes.buscar(condicionTituloUltimoMomento);
-
-        // Mostrar resultados
-        System.out.println("Noticias con texto mayor a 200 caracteres: " + noticiasTextoMayor200.size());
-        System.out.println("Noticias del autor 'Juan Pérez': " + noticiasAutorJuan.size());
-        System.out.println("Noticias con el título 'Último momento': " + noticiasTituloUltimoMomento.size());
-    }
-}
-
-         */
     }   
 }

@@ -4,15 +4,14 @@ import Streaming.Pelicula;
 
 public class CondAnioDur extends Condicion{
     private int anio;
-    private int duracion;
 
-    public CondAnioDur(){
-        this.anio = 2015;
-        this.duracion = 95;
+    public CondAnioDur(int anio){
+        this.anio = anio;
+        
     }
     @Override
     public boolean cumple(Pelicula pel) {
-        return pel.getAnio() < anio && pel.getDuracionMin() < duracion;
+        return pel.getAnio() > anio;
     }
     
 }

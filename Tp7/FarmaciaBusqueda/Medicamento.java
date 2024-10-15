@@ -12,7 +12,6 @@ public class Medicamento {
 	private double precio;
 	private ArrayList<String> sintomas;
 	public Medicamento(String nombre, String laboratorio, double precio) {
-		super();
 		this.nombre = nombre;
 		this.laboratorio = laboratorio;
 		this.precio = precio;

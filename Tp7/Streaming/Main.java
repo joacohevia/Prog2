@@ -2,10 +2,13 @@ package Streaming;
 
 import java.util.ArrayList;
 
-import Streaming.Condiciones.CondActorDirector;
+import Streaming.Condiciones.CondActor;
 import Streaming.Condiciones.CondAnioDur;
-import Streaming.Condiciones.CondPeliAnioGen;
+import Streaming.Condiciones.CondGen;
+import Streaming.Condiciones.CondNodirec;
+import Streaming.Condiciones.CondNot;
 import Streaming.Condiciones.CondPeliMenorGenero;
+import Streaming.Condiciones.CondicionAnd;
 
 public class Main {
     public static void main(String[] args) {
@@ -21,24 +24,31 @@ public class Main {
  
         cazador.addActores("will");
         cazador2.addActores("will");
+        cazador2.addActores("negro");
         cazador3.addActores("fran");
 
+        CondAnioDur condAgregar = new CondAnioDur(2017);
+        CondGen condAgregarGen = new CondGen("infantil", "documental");
+        CondNot condNegar = new CondNot(condAgregarGen);//que no sean ni infantil ni documental
+        CondicionAnd condFinal = new CondicionAnd(condAgregar, condNegar);
+        
         CondPeliMenorGenero condP1 = new CondPeliMenorGenero(120, "comedia");
-        CondPeliAnioGen condP2 = new CondPeliAnioGen(2017, "infantil", "documental");
         //ESTAS CONDICIONES SON PARA AGREGAR PELICULAS PERO PUEDO USAR CUALQUIER OTRA CONDICION
-        s1.addPelicula(cazador,condP1,condP2);
-        s1.addPelicula(cazador2,condP1,condP2);
-        s1.addPelicula(cazador3,condP1,condP2);
-        s1.addPelicula(rapidos,condP1,condP2);
-        s1.addPelicula(rapidos1,condP1,condP2);
+        s1.addPelicula(cazador,condP1,condFinal);
+        s1.addPelicula(cazador2,condP1,condFinal);
+        s1.addPelicula(cazador3,condP1,condFinal);
+        s1.addPelicula(rapidos,condP1,condFinal);
+        s1.addPelicula(rapidos1,condP1,condFinal);
 
         ArrayList <Pelicula> result = s1.getPeliculas();
         System.out.println(result);
 
 
-        CondActorDirector cond1 = new CondActorDirector();
-        CondAnioDur cond2 = new CondAnioDur();
-        ArrayList <Pelicula> resultadosBusqueda = s1.buscar(cond1);
-        System.out.println(resultadosBusqueda);
+        CondActor cond1 = new CondActor("negro");
+        CondNodirec nodirec = new CondNodirec("Martin");
+        CondicionAnd and = new CondicionAnd(cond1,nodirec);
+        
+        ArrayList <Pelicula> resultadosBusqueda = s1.buscar(and);
+        System.out.println("BUSQUEDA: "+resultadosBusqueda);
     }
 }

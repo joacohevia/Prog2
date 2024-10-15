@@ -29,7 +29,7 @@ public class Principal {
 		
 		CondicionNot cnot = new CondicionNot(clab);
 		CondicionOr cor = new CondicionOr(clab, new CondicionLaboratorio("Elea"));
-		ArrayList<Medicamento> busqueda = laNueva.buscar(clab);
+		ArrayList<Medicamento> busqueda = laNueva.buscar(cand1);
 		
 		System.out.println(busqueda);
 	}

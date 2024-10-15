@@ -1,10 +1,9 @@
 package sistemaArchivos;
 
-import sistemaArchivos.condiciones.Condicion;
-
 import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Objects;
+
+import sistemaArchivos.condiciones.Condicion;
 
 public abstract class ElementoSA {
     protected String nombre;    //get y set
@@ -42,6 +41,7 @@ public abstract class ElementoSA {
     protected abstract int cantElementos();
 
     protected abstract ArrayList<Archivo> buscar(Condicion condicion);
+    
     public String toString(){
         return nombre;
     }
