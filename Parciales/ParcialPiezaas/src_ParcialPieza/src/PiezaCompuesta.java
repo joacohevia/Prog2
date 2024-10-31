@@ -5,23 +5,27 @@ public class PiezaCompuesta extends Pieza3D {
 	private int extraPla;
 	private int extraTiempo;
 
-	public PiezaCompuesta(String nom, String des,int extraPla, int extraTiempo) {
-		super(nom,des);
-		this.extraPla = extraPla;
-		this.extraTiempo = extraTiempo;
-		elems = new ArrayList<Pieza3D>();
-	}
-	public PiezaCompuesta(String nom, String des) {
+	/*public PiezaCompuesta(String nom, String des) {
 		super(nom,des);
 		this.extraPla = 1;
 		this.extraTiempo = 45;
 		elems = new ArrayList<Pieza3D>();
+	}*/
+	public PiezaCompuesta(String nom, String des) {
+        this(nom, des, 1, 45);  // Reutiliza el otro constructor con valores por defecto
+    }
+	public PiezaCompuesta(String nom, String des,int extraPla, int extraTiempo) {
+		super(nom, des);
+		this.extraPla = extraPla;
+		this.extraTiempo = extraTiempo;
+		elems = new ArrayList<Pieza3D>();
 	}
+	
 
 	public int getPla() {
 		int suma =0;
 		for(int i=0; i<elems.size();i++) {
-			suma = suma + elems.get(i).getPla();
+			suma += elems.get(i).getPla();
 		}	
 		
 		return suma + extraPla * this.getCantidadSimples();
@@ -30,7 +34,7 @@ public class PiezaCompuesta extends Pieza3D {
 	public int getCantidadSimples() {
 		int suma =0;
 		for(int i=0; i<elems.size();i++)
-			suma = suma + elems.get(i).getCantidadSimples();
+			suma += elems.get(i).getCantidadSimples();
 	
 		return suma;
 	}
@@ -57,6 +61,14 @@ public class PiezaCompuesta extends Pieza3D {
 		return salida;
 	
 	}
+	public ArrayList<Pieza> buscar(Condicion cc){
+		ArrayList<Pieza> salida = new ArrayList<Pieza>();
+	    for(int i =0; i<elems.size();i++) {
+	    	Pieza3D aux = elems.get(i);
+	    	salida.addAll(aux.buscar(cc));
+	    }
+		return salida;
+	}
 	
 	public void addElemento(Pieza3D pp) {
 		elems.add(pp);
@@ -78,14 +90,6 @@ public class PiezaCompuesta extends Pieza3D {
 		this.extraTiempo = extraTiempo;
 	}
 	
-	public ArrayList<Pieza> buscar(Condicion cc){
-		ArrayList<Pieza> salida = new ArrayList<Pieza>();
-	    for(int i =0; i<elems.size();i++) {
-	    	Pieza3D aux = elems.get(i);
-	    	salida.addAll(aux.buscar(cc));
-	    }
-		return salida;
-	}
 	
 	
 }

@@ -1,12 +1,11 @@
 package sistemaArchivos;
 
-import sistemaArchivos.condiciones.Condicion;
-
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
-import java.util.Objects;
+
+import sistemaArchivos.condiciones.Condicion;
 
 public abstract class ElementoSA implements Comparable<ElementoSA>{
     private String nombre;    //get y set

@@ -37,10 +37,9 @@ public class PaqCompuesto extends PaqViaje{
 
     @Override
     public String getDestino() {
-       int size = paquetes.size();
-       if (size>0) {
-            return paquetes.get(size-1).getDestino();
-       }
+       if ( paquetes.size() >0) {
+            return paquetes.get(paquetes.size()-1).getDestino();
+              }
        return null;
     }
 
