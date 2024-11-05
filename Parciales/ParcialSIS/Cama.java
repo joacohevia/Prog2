@@ -63,7 +63,7 @@ public class Cama extends Elemento{
     }
   
     public ArrayList<String> getEquipamiento() {
-        return equipamiento;
+        return new ArrayList<>(equipamiento);
     }
     public Condicion getCondicion() {
         return condicion;

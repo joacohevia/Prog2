@@ -8,8 +8,6 @@ public class Vendedor extends ElementoVentas {
 	private int edad;
 	ArrayList<Venta> ventas;
 	
-	
-	
 	public Vendedor(String nombre, String apellido, int edad) {
 		super();
 		this.nombre = nombre;
@@ -76,7 +74,10 @@ public class Vendedor extends ElementoVentas {
 	
 	public boolean vendisteAlgo(LocalDate fi, LocalDate ff) {
 		for(int i =0; i<ventas.size();i++) {
-			
+
+			/*ventas.get(i).getFecha().isAfter(fi) &&
+			ventas.get(i).getFecha().isBefore(ff)*/
+			// no incluye las fechas limites
 			if (ventas.get(i).getFecha().compareTo(ff)<=0 &&
 				ventas.get(i).getFecha().compareTo(fi)>=0	)
 				return true;

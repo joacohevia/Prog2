@@ -3,14 +3,14 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class Especial extends Categoria{
-    private String categ;
+    private String categ = "ultimo momento";
     private int cantidad;
 
     public Especial(int cant) {
         super();
         this.cantidad = cant;
-        this.categ = "ultimo momento";
     }
+    
     public String getCategoria(){
         return categ;
     }

@@ -28,18 +28,12 @@ public class Establecimiento extends Elemento{
         }
         return disp;
     }
-    @Override
-   public Elemento getCopia(Condicion cc) {
-      if (estaOcupada() && condicion.cumple(paciente)) {
-           return new Cama(this.getPaciente(), this.getCondicion());
-      }
-      return null;
-   } 
+   
 
     @Override
     public Elemento getCopia(Condicion cc) {
         Establecimiento copia = crearCascaron();
-        for (Elemento elem : camas) {
+        for (Elemento elem : camas) {//controlar null
             copia.addElemento(elem.getCopia(cc));
         }
         return copia;

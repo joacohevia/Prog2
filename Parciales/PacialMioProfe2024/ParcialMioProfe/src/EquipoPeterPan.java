@@ -15,4 +15,6 @@ public class EquipoPeterPan extends Equipo {
 		}
          return menor;  
 	}
+
+	
 }

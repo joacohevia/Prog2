@@ -12,4 +12,6 @@ public class CompCiudadOrigen implements Comparator<PaqViaje> {
         }
         return p1.getId() - p2.getId();  //Integer.compare(p1.getId(), p2.getId());
     }
+
+   
 }

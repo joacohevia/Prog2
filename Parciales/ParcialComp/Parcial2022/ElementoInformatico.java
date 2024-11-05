@@ -10,6 +10,7 @@ public abstract class  ElementoInformatico {
     }
 
     public int getId(){return this.id;}
+    
     public abstract double getValor();
     public abstract int getAntiguedad();
     public abstract ArrayList<Elemento>listar(Condicion c);

@@ -3,31 +3,14 @@ import java.util.Collections;
 import java.util.Comparator;
 
 public class Empresa {
-
 	ArrayList<ElementoVentas> vendedores;
+	Comparator<ElementoVentas> ordenador;//atributo get y set
 	
-	Comparator<ElementoVentas> ordenador;
-	
-	
-	
-	public Comparator<ElementoVentas> getOrdenador() {
-		return ordenador;
-	}
-
-
-
-	public void setOrdenador(Comparator<ElementoVentas> ordenador) {
-		this.ordenador = ordenador;
-	}
-
-
-
 	public ArrayList<ElementoVentas> getRaking(){
-		ArrayList<ElementoVentas> salida = new ArrayList<ElementoVentas>(vendedores);
+		ArrayList<ElementoVentas> salida = new ArrayList<ElementoVentas>(vendedores);//creo copia
 	    Collections.sort(salida,ordenador);
 	    return salida;
 	}
-
 
 	public ArrayList<Vendedor> buscar(Condicion c){
 		ArrayList<Vendedor> salida = new ArrayList<Vendedor>();
@@ -38,5 +21,11 @@ public class Empresa {
 		return salida;
 	}
 
+	public Comparator<ElementoVentas> getOrdenador() {
+		return ordenador;
+	}
 
+	public void setOrdenador(Comparator<ElementoVentas> ordenador) {
+		this.ordenador = ordenador;
+	}
 }

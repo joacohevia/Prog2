@@ -34,8 +34,7 @@ public abstract class Pieza3D {
 
     
 	public int getCosto() {
-		return this.getPla()*getPrecioGramo() + 
-				this.getTiempo()*Pieza3D.getCostoSegundo();
+		return this.getPla()*getPrecioGramo() + this.getTiempo()*Pieza3D.getCostoSegundo();
 	}
 	
 	public static int getPrecioGramo() {
