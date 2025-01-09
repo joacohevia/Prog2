@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Avion2/Avion2.iml" filepath="$PROJECT_DIR$/Avion2/Avion2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Clases/Clases.iml" filepath="$PROJECT_DIR$/Clases/Clases.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tp10/ComparacionObj/ComparacionObj.iml" filepath="$PROJECT_DIR$/Tp10/ComparacionObj/ComparacionObj.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Clases/Dados2/Dados2.iml" filepath="$PROJECT_DIR$/Clases/Dados2/Dados2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Clases/Dinamico/Dinamico.iml" filepath="$PROJECT_DIR$/Clases/Dinamico/Dinamico.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Clases/Figura/Figura.iml" filepath="$PROJECT_DIR$/Clases/Figura/Figura.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Parciales/PacialMioProfe2024/PacialMioProfe2024.iml" filepath="$PROJECT_DIR$/Parciales/PacialMioProfe2024/PacialMioProfe2024.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Parciales/ParcialFiguritas/ParcialFiguritas.iml" filepath="$PROJECT_DIR$/Parciales/ParcialFiguritas/ParcialFiguritas.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Parciales/ParcialJuegueteria/ParcialJuegueteria.iml" filepath="$PROJECT_DIR$/Parciales/ParcialJuegueteria/ParcialJuegueteria.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Parciales/ParcialPiezaas/ParcialPiezaas.iml" filepath="$PROJECT_DIR$/Parciales/ParcialPiezaas/ParcialPiezaas.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Parciales/Parciales.iml" filepath="$PROJECT_DIR$/Parciales/Parciales.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Clases/Parcialito4/Parcialito4.iml" filepath="$PROJECT_DIR$/Clases/Parcialito4/Parcialito4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Clases/Parcialito4/Parcialito4-2024/Parcialito4-2024.iml" filepath="$PROJECT_DIR$/Clases/Parcialito4/Parcialito4-2024/Parcialito4-2024.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Parciales/Presupuesto2023/Presupuesto2023.iml" filepath="$PROJECT_DIR$/Parciales/Presupuesto2023/Presupuesto2023.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tp10/Tp10.iml" filepath="$PROJECT_DIR$/Tp10/Tp10.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tp6/Tp6.iml" filepath="$PROJECT_DIR$/Tp6/Tp6.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tp7/Tp7.iml" filepath="$PROJECT_DIR$/Tp7/Tp7.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tp9/Tp9.iml" filepath="$PROJECT_DIR$/Tp9/Tp9.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Parciales/cursos2023/cursos2023.iml" filepath="$PROJECT_DIR$/Parciales/cursos2023/cursos2023.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Clases/libreria/libreria.iml" filepath="$PROJECT_DIR$/Clases/libreria/libreria.iml" />
+      <module fileurl="file://$PROJECT_DIR$/prog2.iml" filepath="$PROJECT_DIR$/prog2.iml" />
+    </modules>
+  </component>
+</project>

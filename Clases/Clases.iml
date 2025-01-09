@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/Dados" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/EjercicioNavidad2" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Parcialito4" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/TP7" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/abtrac" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src-Com1-Fig3D-DadosCargados-Object-Coleccion (1)" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="Parcialito4" />
+  </component>
+</module>

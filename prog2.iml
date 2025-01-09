@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Parciales" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Tp11" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Tp5" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Tp7" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Tp8" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Tp9" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="ComparacionObj" />
+    <orderEntry type="module" module-name="Clases" />
+    <orderEntry type="module" module-name="Parcialito4" />
+    <orderEntry type="module" module-name="cursos2023" />
+    <orderEntry type="module" module-name="Parciales" />
+  </component>
+</module>
